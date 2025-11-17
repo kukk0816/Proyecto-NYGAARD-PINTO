@@ -1,0 +1,43 @@
+body    
+        {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0beff, #c587ff);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Encabezados */
+        h1 {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px 0;
+            border-radius: 15px;
+            width: 60%;
+            margin: 40px auto 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Imágenes */
+        img {
+            width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Pie de página opcional */
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #fff;
+            opacity: 0.8;
+        }

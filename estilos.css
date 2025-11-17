@@ -1,0 +1,193 @@
+:root {
+    --color-principal: #aa50ffc0;
+    --color-fondo: #f9f6ff;
+    --color-texto: #222;
+    --color-acento: #b592ee;
+}
+
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: 'Gill Sans Ultra Bold Condensed';
+    background: linear-gradient(135deg, #a16bff 0%, #c4a0ff 100%);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* 🟣 Encabezado moderno */
+header {
+    background: linear-gradient(90deg, var(--color-principal), var(--color-acento));
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 4px solid #b38ce6;
+    box-shadow: 0 4px 20px rgb(166, 135, 194);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 1.0rem;
+    opacity: 0.9;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: var(--color-acento);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--color-principal);
+    color: white;
+    border-radius: 5px;
+}
+
+/* 📘 Secciones */
+section {
+    background: white;
+    margin: 2rem auto;
+    padding: 2.5rem 2rem;
+    max-width: 900px;
+    border-radius: 12px;
+    border-style: groove;
+    box-shadow: 0 4px 15px rgba(170, 80, 255, 0.1);
+}
+
+section h2 {
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* 🔘 Botones */
+.btn {
+    display: inline-block;
+    background: var(--color-principal);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--color-acento);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(170, 80, 255, 0.3);
+}
+
+/* 👣 Footer */
+footer {
+    text-align: center;
+    background: var(--color-principal);
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 4px solid #8d38ff;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+
+
+.fondo-burbujas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.burbuja {
+  position: absolute;
+  bottom: -100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: flotar 20s linear infinite;
+}
+
+/* Colores lila, blanco y gris */
+.burbuja:nth-child(3n) { background-color: #c8a2c8; } /* lila */
+.burbuja:nth-child(3n+1) { background-color: #ffffff; } /* blanco */
+.burbuja:nth-child(3n+2) { background-color: #cccccc; } /* gris */
+
+/* Posiciones y tamaños aleatorios */
+.burbuja:nth-child(1) { left: 10%; animation-duration: 18s; }
+.burbuja:nth-child(2) { left: 20%; animation-duration: 22s; }
+.burbuja:nth-child(3) { left: 30%; animation-duration: 25s; }
+.burbuja:nth-child(4) { left: 40%; animation-duration: 19s; }
+.burbuja:nth-child(5) { left: 50%; animation-duration: 21s; }
+.burbuja:nth-child(6) { left: 60%; animation-duration: 23s; }
+.burbuja:nth-child(7) { left: 70%; animation-duration: 20s; }
+.burbuja:nth-child(8) { left: 80%; animation-duration: 24s; }
+.burbuja:nth-child(9) { left: 90%; animation-duration: 26s; }
+.burbuja:nth-child(10) { left: 15%; animation-duration: 17s; }
+.burbuja:nth-child(11) { left: 25%; animation-duration: 22s; }
+.burbuja:nth-child(12) { left: 35%; animation-duration: 19s; }
+.burbuja:nth-child(13) { left: 45%; animation-duration: 20s; }
+.burbuja:nth-child(14) { left: 55%; animation-duration: 23s; }
+.burbuja:nth-child(15) { left: 65%; animation-duration: 21s; }
+.burbuja:nth-child(16) { left: 75%; animation-duration: 18s; }
+.burbuja:nth-child(17) { left: 85%; animation-duration: 25s; }
+.burbuja:nth-child(18) { left: 95%; animation-duration: 27s; }
+.burbuja:nth-child(19) { left: 5%; animation-duration: 20s; }
+.burbuja:nth-child(20) { left: 50%; animation-duration: 22s; }
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-500px) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-1000px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
